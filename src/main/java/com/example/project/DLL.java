@@ -64,20 +64,23 @@ public class DLL<T> {
         else
             current = current.next;
     }
-    public void removeBetween(T e1, T e2) {
-       Node <T> p = head ;
-while (( p != null ) && (! p.data . equals ( e1 ) ) )
-p = p.next ;
-i f ( p == null )
-return;
-Node <T > q = p . next ;
-while (( q != null ) && (!q.data.equals( e2 ) ) )
-q = q.next ;
-i f ( q == null )
-return;
-p.next = q ;
-q.previous = p ;
-current = head ;
+    public void removeBetween(T e1, T e2) {Node<T> p = head;
+while (p != null && !p.data.equals(e1)) {
+    p = p.next;
+}
+if (p == null) {
+    return;
+}
 
-    }
+Node<T> q = p.next;
+while (q != null && !q.data.equals(e2)) {
+    q = q.next;
+}
+if (q == null) {
+    return;
+}
+
+p.next = q;
+q.previous = p;
+current = head;
 }
