@@ -2,13 +2,18 @@ package com.example.project;
 
 public class ListTester {
     public static <T> void circularLeftShift(List <T> list, int n)
-    {for ( in t i = 0; i < n ; i ++) {
-list . findFirst () ;
-T elem = list . retrieve () ;
-list . remove () ;
-while (! list . last () )
-list . findNext () ;
-list . insert ( elem ) ;
+    {for (int i = 0; i < n; i++) { 
+    list.findFirst();
+    T elem = list.retrieve();
+    list.remove();
+
+    while (!list.last()) {
+        list.findNext();
+    }
+
+    list.insert(elem);
+}
+
 }
 
     }
