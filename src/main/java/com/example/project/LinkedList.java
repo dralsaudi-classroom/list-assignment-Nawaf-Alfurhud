@@ -55,12 +55,24 @@ public class LinkedList<T> implements List<T>{
         }
     }
     public T mostFrequentElement() {
-        throw new UnsupportedOperationException("Not supported yet.");
-        //         Write the method mostFrequentElement, member of the class LinkedList, that returns
-        // the most frequent element in the list. The most frequent element is the element
-        // appearing the highest number of times. If one or more element appear the same
-        // number of times, the one encountered earlier is returned.
-        // Example 1.1. Given the list l : A, B, C, B, C, D, E, mostFrequentElement() returns
-        // B.
+        T mfe = nu l l ;
+in t max = 0;
+Node <T > p = head ;
+wh i le ( p != nu l l ) {
+Node <T > q = p ;
+in t count = 0;
+wh i le ( q != nu l l ) {
+i f ( q . data . equals ( p . data ) )
+count ++;
+q = q . next ;
+}
+i f ( count > max ) {
+max = count ;
+mfe = p . data ;
+}
+p = p . next ;
+}
+return mfe ;
+
     }
 }
