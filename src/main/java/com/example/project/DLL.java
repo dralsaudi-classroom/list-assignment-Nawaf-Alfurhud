@@ -84,3 +84,4 @@ p.next = q;
 q.previous = p;
 current = head;
 }
+}
